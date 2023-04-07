@@ -10,7 +10,6 @@ const swiper = new Swiper(".swiper", {
     }
   });
 
-
 //scroll_effect
   $(function () {
     $(window).scroll(function () {
