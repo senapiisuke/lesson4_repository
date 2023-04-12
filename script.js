@@ -21,7 +21,6 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-
 //アコーディオンにクラス付与する
 $(".accordion-button").on("click", function(){
   $(".accordion-button").addClass("collapsed");
