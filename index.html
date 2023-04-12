@@ -1,171 +1,255 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Bootstrap　CSS導入 -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   
-   
-   <!-- Swiper　CSS導入 -->
-   <link
-     rel="stylesheet"
-     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-   />
-   <link rel="stylesheet" href="base.css">
-
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Geekationコーディング応用</title>
-   
+
+   <!-- Bootstrap CSS読み込み -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!-- swiper CSS読み込み -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+   <!-- base.css　読み込み -->
+   <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
-   <div class="header">
-      <!-- ヘッダー　＊Bootstrapからコピペしただけなので後で細いところ後ほど変更する -->
+   <header>
+      <!-- Bootstrap Navbarからコピペ　細いところは後ほど調整 -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div class="container-fluid">
-           <a class="navbar-brand" href="#">Navbar</a>
+           <a class="navbar-brand" href="#">Casteria</a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
            </button>
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-               <li class="nav-item">
-                 <a class="nav-link active" aria-current="page" href="#">Home</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link" href="#">Link</a>
-               </li>
-               <li class="nav-item dropdown">
-                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   Dropdown
-                 </a>
-                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <li><a class="dropdown-item" href="#">Action</a></li>
-                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                   <li><hr class="dropdown-divider"></li>
-                   <li><a class="dropdown-item" href="#">Something else here</a></li>
-                 </ul>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-               </li>
-             </ul>
-             <form class="d-flex">
-               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-               <button class="btn btn-outline-success" type="submit">Search</button>
-             </form>
+           <div class="navbar-right">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                 <li class="nav-item">
+                   <a class="nav-link active" aria-current="page" href="#">Home</a>
+                 </li>
+                 
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">Food</a>
+                 </li>
+                 
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Drink</a>
+                 </li>
+  
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">お問合せ</a>
+                  </li>
+               </ul>
+  
+               <form class="d-flex">
+                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                 <button class="btn btn-outline-success" type="submit">Search</button>
+               </form>
+             </div>
            </div>
+           
+
          </div>
        </nav>
-   </div>
-   
-   <div class="top">
-      <!-- Slider main container -->
-      <div class="swiper">
-         <!-- Additional required wrapper -->
-         <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img src="interior.jpg"></div>
-            <div class="swiper-slide"><img src="restaurant.jpg"></div>
-            <div class="swiper-slide"><img src="food.jpg"></div>
-            <div class="swiper-slide"><img src="food2.jpg"></div>
-         </div>
-         <!-- ページネーション -->
-         <div class="swiper-pagination"></div>
-         <!-- ナビボタン -->
-         <div class="swiper-button-prev"></div>
-         <div class="swiper-button-next"></div>
-      </div>
-   </div>
-   
-   <div class="container">
-      <h1>新型コロナウイルスに対する取り組みの最新情報をご案内</h1>
-      <!-- アコーディオン追加。色やサイズは後ほど調整する。-->
-      <div class="accordion" id="accordionExample">
-         <div class="accordion-item">
-         <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-               ■衛生面に関して
-            </button>
-         </h2>
-         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-               <ul>
-                  <li>マスクを着用しての接客</li>
-                  <li>出勤前の検温の徹底</li>
-               </ul>
-            </div>
-         </div>
-         </div>
-         <div class="accordion-item">
-         <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-               ■お客様へのご協力のお願い
-            </button>
-         </h2>
-         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-               <ul>
-                  <li>店内では、飲食時以外のマスクの着用をお願いいたします</li>
-                  <li>入店時の手指の消毒にご協力ください</li>
-                  <li>レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</li>
-                  <li>多数でお越しの際は、お１人がまとめてご注文願います（混雑時に入場制限をする場合がございます）</li>
-                  <li>発熱や体調不良の際はご入店をお控えください</li>
-               </ul>
-            </div>
-         </div>
-         </div>
-         <div class="accordion-item">
-         <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-               ■サービスに関して
-            </button>
-         </h2>
-         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-               <ul>
-                  <li>直接お渡しする商品の提供、金銭授受時にグローブの着用</li>
-                  <li>ドリンクやフードのサンプリング中止</li>
-                  <li>地域活動・イベントの中止</li>
-                  <li>混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
-                  <li>店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
-                  <li>混雑状況に応じたドライブスルーサービスの一時休止や店内席利用の制限</li>
-               </ul>
-            </div>
-         </div>
-         </div>
-      </div>
       
-      <!-- jsでフワッと出てくるようにする -->
-      <div class="scroll-up">
-         <p>Signature Food</p>
-         <div class="item">
-            <img src="food.jpg">
-            <p>サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる２種のソースも絶品です！</p>
-         </div>
-      </div>
 
-      <div class="scroll-up">
-         <p>Our Coffe</p>
-         <div class="item">
-            <img src="barista.jpg">
-            <p>当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆のおいしさを最大限に引き出すために自社のロースタリーで焙煎しています。</p>
+   </header>
+   
+   <main>
+      <!-- スライダー -->
+      <section id="slider">
+         <div class="swiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide"><img src="interior.jpg" class="d-block w-100"></div>
+               <div class="swiper-slide"><img src="restaurant.jpg" class="d-block w-100"></div>
+               <div class="swiper-slide"><img src="food.jpg" class="d-block w-100"></div>
+               <div class="swiper-slide"><img src="food2.jpg" class="d-block w-100"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
          </div>
-      </div>
+      </section>
+   
+      <!-- コロナ対策についてのinfo -->
+      <div class="container">
+         <h1>新型コロナウイルスに対する取り組みの最新情報をご案内</h1>
+         <!-- Bpptstrap アコーディオンからコピペ　細いところは後ほど調整 -->
+         <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  ■衛生面に関して
+               </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+               <div class="accordion-body">
+                  <ul>
+                     <li>マスクを着用しての接客</li>
+                     <li>出勤前の検温の徹底</li>
+                     <li>レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置</li>
+                     <li>より頻度の高い手洗いの励行</li>
+                     <li>テーブルびお客様の消毒用アルコールの設置</li>
+                     <li>従業員間の距離確保のため、休憩や研修時の客席利用</li>
+                  </ul>
+               </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  ■お客様へのご協力のお願い
+               </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+               <div class="accordion-body">
+                  <ul>
+                     <li>店内では、飲食時以外のマスク着用をお願いいたします</li>
+                     <li>入店時の手指の消毒にご協力ください</li>
+                     <li>レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</li>
+                     <li>多数でお越しの際は、お１人がまとめてご注文願います（混雑時に入場制限をする場合がございます）</li>
+                     <li>発熱や体調不良の際はご入店をお控えください</li>
+                  </ul>
+               </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  ■サービスに関して
+               </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+               <div class="accordion-body">
+                  <ul>
+                     <li>直接お渡しする商品の提供、金銭授受時にグローブの着用</li>
+                     <li>ドリンクやフードのサンプリング中止</li>
+                     <li>地域活動・イベントの中止</li>
+                     <li>混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
+                     <li>店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
+                     <li>混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</li>
+                  </ul>
+               </div>
+            </div>
+            </div>
+         </div>
+         
+      <!-- アニメーションでフワッと出現させる -->   
+         <!-- メニュー3つ -->
+         <div class="fadein">
+            <div class="row">
+               <h5>Signature Food</h5>
+               <div class="col-md-5">
+                  <div class="menue-image">
+                     <img src="food.jpg" alt="写真">
+                  </div>              
+               </div>
+               <div class="col-md-7">
+                  <p>サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる２種のソースも絶品です！</p>
+               </div>
+            </div>
+         </div>
 
-      <div class="scroll-up">
-         <p>Our Food</p>
-         <div class="item">
-            <img src="food3.jpg">
-            <p>当店は何よりまずは衛生管理に気をつけています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。</p>
+         <div class="fadein">
+            <div class="row">
+               <h5>Our Coffee</h5>
+               <div class="col-md-5">
+                  <div class="menue-image">
+                     <img src="barista.jpg" alt="写真">
+                  </div>   
+               </div>
+               <div class="col-md-7">
+                  <p>当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆のおいしさを最大限に引き出すために自社のロースタりーで焙煎しています。</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="fadein">
+            <div class="row">
+               <h5>Our Food</h5>
+               <div class="col-md-5">
+                  <div class="menue-image">
+                     <img src="food3.jpg" alt="写真">
+                  </div> 
+               </div>
+               <div class="col-md-7">
+                  <p>当店は何よりまずは衛生管理に気をつけています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。</p>
+               </div>
+            </div>
+         </div>         
+
+         <!-- アドレス -->
+         <div class="fadein">
+            <div class="adress">
+               <div class="row">
+                  <div class="col-md-7">
+                     <div class="card-body">
+                        <h5>Adress</h5>
+                        <p>681 xxxx Drive,xxxxx xxxx #01-06-000000</p>
+                        <p>Opening Hours</p>
+                        <h5>Mondays-Friday:10am-9pm</h5>
+                        <p>Saturdays, Sundays & Public Holidays: 9am- 9pm</p>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="menue-image">
+                        <img src="barista.jpg" alt="写真">
+                     </div>              
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- 店舗一覧 -->
+         <div class="fadein">
+            <div class="row" id="shop-information">
+               <h5 class="shop-info">店舗一覧</h5>
+               <div class="col-md-3">
+                  <div class="shop-image">
+                     <img src="restaurant2.jpg" alt="写真">  
+                  </div> 
+                  <p>東京都渋谷区xxxxxx xxxxx</p>
+               </div>
+               <div class="col-md-3">
+                  <div class="shop-image">
+                     <img src="restaurant3.jpg" alt="写真">
+                  </div> 
+                  <p>千葉県松戸市xxxxx xxxxx</p>
+               </div>
+               <div class="col-md-3">
+                  <div class="shop-image">
+                     <img src="restaurant4.jpg" alt="写真">
+                  </div> 
+                  <p>神奈川県横浜市xxxxx xxxx</p>
+               </div>
+               <div class="col-md-3">
+                  <div class="shop-image">
+                     <img src="restaurant5.jpg" alt="写真">
+                  </div> 
+                  <p>埼玉県川越市xxxxx xxxx</p>
+               </div>             
+            </div>
          </div>
       </div>
-   </div>  
-   <!-- Bootstarp js導入。jsは</body>直前に配置 -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   <!-- Swiper導入。jsは</body>直前に配置 -->
+   </main>
+
+   <!-- フッター -->
+   <footer>
+      <div class="footer-container">
+         <p>プライバシーポリシー</p>
+         <p>お問合せ</p>
+         <p>運営会社</p>  
+      </div>
+   </footer>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <!-- Bootstrap js読み込み -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>>
+   <!-- swiper js読み込み *</body>直前に配置 -->
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <!-- script.js　読み込み -->
    <script src="script.js"></script>
 </body>
 </html>
